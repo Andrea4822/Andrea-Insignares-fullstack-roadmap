@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -11,34 +11,35 @@
     <form action="" method="get">
 
         <label for="nombre">Nombre</label>
-        <input type="text" pattern="^[A-Za-z]+$" maxlength="40" required id="nombre" name="nombre">
-        <br>
+        <input type="text" pattern="[A-Za-zÀ-ÿ\s]+" maxlength="40" required id="nombre" name="nombre">
+        
 
         <label for="apellido">Apellido</label>
         <input type="text" pattern="^[A-Za-z]+$" maxlength="40" required  id="apellido" name="apellido">
-        <br>
+        
 
         <label for="telefono">Teléfono</label>
-        <input type="number" id="telefono" name="telefono">
-        <br>
+        <input type="tel" id="telefono" name="telefono">
+        
 
         <label for="fecha">Fecha de nacimiento</label>
         <input type="date" id="fecha" name="fecha">
-        <br>
+        
 
         <label for="correo">Correo electrónico</label>
-        <input type="email" id="correo" name="correo">
-        <br>
+        <input type="email" id="correo" name="correo" required>
+        
 
         <label for="url">URL de linkedln</label>
         <input type="url" id="url" name="url">
-        <br>
+        
 
         <label for="genero">Género</label>
         <select id="genero" name="genero">
             <option value="femenino">Femenino</option>
             <option value="masculino">Masculino</option>
-        <br>
+        </select>
+        
 
         <input type="submit" value="Enviar">
         <input type="reset" value="Borrar">

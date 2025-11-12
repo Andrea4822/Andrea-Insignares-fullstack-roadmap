@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tasks</title>
+    <style>
+      li{
+        background-color: rgb(234, 155, 141);
+        width: 80px;;
+
+      }
+    </style>
+</head>
+<body>
+    <h2>
+        Tasks
+    </h2>
+    <ol>
+        <li><del>wake up</del></li>
+    </ol>
+    <input type="text" id="task">
+    <button id="add__task__button">Add Task</button>
+
+<script>
+
+const boton = document.getElementById('add__task__button');
+const input= document.getElementById('task');
+const ol = document.querySelector('ol');
+
+boton.addEventListener ('click', function() {
+
+
+const listaAntigua = ol.querySelectorAll('li')
+for (let i = 0; i < listaAntigua.length; i++){
+    listaAntigua[i].style.backgroundColor = 'rgb(234, 155, 141)'
+listaAntigua[i].innerHTML= `<del>${listaAntigua[i].innerText}</del>`
+listaAntigua[i].style.width = '100px';
+}
+
+const li = document.createElement('li')
+li.innerHTML=`<ins>${input.value}</ins>`;
+ol.appendChild(li)
+li.style.backgroundColor = 'lightgreen'
+li.style.width = '100px';
+});
+
+
+    </script>
+    
+</body>
+</html>
+

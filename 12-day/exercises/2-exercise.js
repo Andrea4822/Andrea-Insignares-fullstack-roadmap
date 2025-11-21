@@ -1,0 +1,1 @@
+//Crear una función que reciba un objeto y el nombre de una propiedad. Si la propiedad existe, debe devolver su valor. Si no existe, debe devolver un mensaje específico.

@@ -1,6 +1,13 @@
-/*create a function that returns an array of books based on chapters number,
-the function should be named "getBooksByChaptersNumber", the function should receive only one parameter
-that is the minimum chapters that the book should have.*/
+/*--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+2 Using the bookCollection array, write a function that:
+For each book:
+Calculates the average rating based on the ratings array (each rating has a score property).
+Prints a message for each book like:
+"Dune - Average rating: 4.52"
+Also calculates the overall average rating of the entire collection, considering all scores from all books together.
+At the end, prints:
+"Global average rating: X"
+Hint: Nested loops (books → ratings) Use of multiple accumulators (per book and global).*/
 
 const bookCollection = [
   {
@@ -454,52 +461,20 @@ const bookCollection = [
   },
 ];
 
+function calcular(bookCollection){
+  let calificacionPromedio=0;
+  let counter=0;
 
+    for (let i=0; i <bookCollection.length;i++){
+        for( let j =0; j < bookCollection[i].ratings.length;j++){
+          calificacionPromedio +=bookCollection[i].ratings[j].score;
+          counter ++;
+          
 
-
-function getBooksByAmazonRating(puntaje) {
-  let array1 = [];
-  for (let i = 0; i < bookCollection.length; i++) {
-    for (let j =0 ; j <bookCollection[i].ratings.length;j++){
-      if(bookCollection[i].ratings[j].source === "Amazon" && bookCollection[i].ratings[j].score >= puntaje){
-          array1.push(bookCollection[i]);
-        }
-      }
-
+        
+       }
     }
-  return array1;
-  }
-  
-
-const books =getBooksByAmazonRating(4);
-console.log (JSON.stringify(books,null,2));
-
-
-function getBooksByGenre(genero) {
-let arrayBokks=[];
-  for (let i = 0; i < bookCollection.length; i++) {
-    for (let j= 0; j <bookCollection[i].genre.length; j++){
-      if (bookCollection[i].genre[j]===genero){
-        arrayBokks.push(bookCollection[i])
-
-      }
-      }
-      
-    }
-    return arrayBokks;
-  }
-
-console.log(getBooksByGenre("Science Fiction"));
-
-
-function getBooksByChaptersNumber(number) {
-  let arrayNuevo = [];
-  for (let i = 0; i < bookCollection.length; i++) {
-    if (bookCollection[i].chapters >= number) {
-      arrayNuevo.push(bookCollection[i]);
-    }
-  }
-  return arrayNuevo;
+  return calificacionPromedio/counter;
 }
 
-console.log(getBooksByChaptersNumber(10));
+console.log (calcular(bookCollection));

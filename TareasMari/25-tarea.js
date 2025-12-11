@@ -1,6 +1,11 @@
-/*create a function that returns an array of books based on chapters number,
-the function should be named "getBooksByChaptersNumber", the function should receive only one parameter
-that is the minimum chapters that the book should have.*/
+/*1. Using the bookCollection array, write a function that:
+Iterates through all the books.
+Considers only books where isAvailable is true.
+Calculates the total number of pages of all available books.
+Returns that total number.
+Output:
+Total pages of available books: X
+Hint: practice filtering with a condition and using an accumulator (totalPages). */
 
 const bookCollection = [
   {
@@ -454,52 +459,15 @@ const bookCollection = [
   },
 ];
 
-
-
-
-function getBooksByAmazonRating(puntaje) {
-  let array1 = [];
-  for (let i = 0; i < bookCollection.length; i++) {
-    for (let j =0 ; j <bookCollection[i].ratings.length;j++){
-      if(bookCollection[i].ratings[j].source === "Amazon" && bookCollection[i].ratings[j].score >= puntaje){
-          array1.push(bookCollection[i]);
-        }
-      }
-
-    }
-  return array1;
-  }
-  
-
-const books =getBooksByAmazonRating(4);
-console.log (JSON.stringify(books,null,2));
-
-
-function getBooksByGenre(genero) {
-let arrayBokks=[];
-  for (let i = 0; i < bookCollection.length; i++) {
-    for (let j= 0; j <bookCollection[i].genre.length; j++){
-      if (bookCollection[i].genre[j]===genero){
-        arrayBokks.push(bookCollection[i])
-
-      }
-      }
-      
-    }
-    return arrayBokks;
-  }
-
-console.log(getBooksByGenre("Science Fiction"));
-
-
-function getBooksByChaptersNumber(number) {
-  let arrayNuevo = [];
-  for (let i = 0; i < bookCollection.length; i++) {
-    if (bookCollection[i].chapters >= number) {
-      arrayNuevo.push(bookCollection[i]);
-    }
-  }
-  return arrayNuevo;
+function getBooksByAvailability(isAvailability) {
+  let totalPages=0;
+  for (let i = 0; i <bookCollection.length; i++) {
+    if (bookCollection[i].isAvailable === isAvailability) {
+      totalPages += bookCollection[i].pages;
 }
+    }
+      return totalPages;
+  }
 
-console.log(getBooksByChaptersNumber(10));
+
+console.log (getBooksByAvailability(true));

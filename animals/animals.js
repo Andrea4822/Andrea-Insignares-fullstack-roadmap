@@ -213,7 +213,7 @@ const animalsCollection = [
 function getAnimalsByColor(animalColor){
     let cantidadAnimales=0;
     for (let i=0; i <animalsCollection.length; i++){
-        if (animalsCollection[i].color.toLocaleUpperCase() === animalColor.toUpperCase() ){
+        if (animalsCollection[i].color.toLocaleUpperCase().includes === animalColor.toUpperCase() ){
             cantidadAnimales++;
 
         }

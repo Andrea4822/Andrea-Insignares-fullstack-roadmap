@@ -582,7 +582,7 @@ console.log (getSciFiBooks(bookCollection));*/
 // Example Output: ["The Name of the Wind", "Where the Sidewalk Ends", ...]
 // Hint: Inside the main forEach, you might need another loop (or .find/.some) to check the `ratings` array for any score > 4.8.
 
-function getHighRatedBooks (bookCollection){
+/*function getHighRatedBooks (bookCollection){
 
   let array=[];
   bookCollection.forEach(book => {
@@ -598,7 +598,7 @@ function getHighRatedBooks (bookCollection){
 console.log(getHighRatedBooks(bookCollection));
 
 function getHighRatedBooks (bookCollection){
-  let array=[];
+  let array=[];*/
 
 
 }

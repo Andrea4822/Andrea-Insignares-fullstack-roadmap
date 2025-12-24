@@ -77,7 +77,7 @@ const personas = [
  *      { nombre: "Mariana", edad: 30, intereses: ["Fotografía"], ciudad: "Medellín", genero: "Femenino" }
  */
 
-/*function encontrarParejaEnLaCiudad(personaObjetivo) {
+function encontrarParejaEnLaCiudad(personaObjetivo) {
     let pareja;
 
     for (let persona of personas) {
@@ -88,7 +88,7 @@ const personas = [
     return pareja;
 }
 
-console.log(encontrarParejaEnLaCiudad({ nombre: "Camilo", edad: 28, intereses: ["Arte"], ciudad: "Medellín", genero: "Masculino" }));*/
+console.log(encontrarParejaEnLaCiudad({ nombre: "Camilo", edad: 28, intereses: ["Arte"], ciudad: "Medellín", genero: "Masculino" }));
 
 
 /**

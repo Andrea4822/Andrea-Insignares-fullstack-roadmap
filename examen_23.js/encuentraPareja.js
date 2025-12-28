@@ -84,8 +84,18 @@ function encontrarParejaEnLaCiudad(personaObjetivo) {
         if ((persona.ciudad === personaObjetivo.ciudad) && (persona.genero !== personaObjetivo.genero))
             pareja = persona;
     }
-
     return pareja;
+}
+
+console.log(encontrarParejaEnLaCiudad({ nombre: "Camilo", edad: 28, intereses: ["Arte"], ciudad: "Medellín", genero: "Masculino" }));
+
+function encontrarParejaEnLaCiudad(personaObjetivo) {
+
+    for (let persona of personas) {
+        if ((persona.ciudad === personaObjetivo.ciudad) && (persona.genero !== personaObjetivo.genero))
+            return pareja;;
+    }
+
 }
 
 console.log(encontrarParejaEnLaCiudad({ nombre: "Camilo", edad: 28, intereses: ["Arte"], ciudad: "Medellín", genero: "Masculino" }));

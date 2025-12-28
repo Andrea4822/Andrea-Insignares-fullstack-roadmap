@@ -19,5 +19,22 @@ function revisarEstructura(estructura){
     }else{
         return false;
     }
+
+    console.log(revisarEstructura("( ( ( ()) ) () (()) ())"))
 }
-console.log(revisarEstructura("("))
+
+function revisarEstructura(estructura){
+    let contador= 0;
+    for (let i =0; i <estructura.length; i++){
+        if(estructura[i] === "(") contador++
+        if (estructura[i] === ")") contador--
+        if(contador <0) return false;
+    }
+
+    return !contador ===0;
+}
+
+console.log(revisarEstructura ("()"))
+console.log(revisarEstructura ("()  ()"))
+console.log (revisarEstructura (")("))
+

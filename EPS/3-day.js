@@ -39,4 +39,24 @@ console.log(checking());*/
 // que tenemos un impostor! realiza un script que nos permita identificar tanto a los pacientes que este 
 // impostor halla atendido como a los hospitales en los que estuvo para poder realizar nuestro respectivo informe.
 
+function checking(){
+    let informe=[];
+    for(let i =0; i <historiasClinicasDB.length;i++){
+        if(historiasClinicasDB[i].doctor === "Dr. Alberto Martínez"){
+            for(let j=0; j < usuariosDB.length;j ++){
+                if(usuariosDB[j].userId === historiasClinicasDB[i].userId){
+                    informe.push({
+                        paciente: usuariosDB[j].firstName+ " " + usuariosDB[j].lastName,
+                        hospital :historiasClinicasDB[i].hospitalName,
+                    })
+                     break;
+                }
+            }
+        }
+
+    }
+    return informe;
+}
+console.log (checking());
+
 

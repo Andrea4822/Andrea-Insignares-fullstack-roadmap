@@ -69,7 +69,7 @@ function userLastAppointment(idUsuario) {
   };
   for (let i = 0; i < historiasClinicasDB.length; i++) {
     if (historiasClinicasDB[i].userId === idUsuario && historiasClinicasDB[i].date >fechaReciente ){
-       historiaPaciente.userId = historiasClinicasDB[i].userId;
+    historiaPaciente.userId = historiasClinicasDB[i].userId;
     historiaPaciente.fullName = sacarNombre(idUsuario);
     historiaPaciente.serviceId = historiasClinicasDB[i].serviceId;
     historiaPaciente.speciality= historiasClinicasDB[i].speciality;
@@ -80,7 +80,7 @@ function userLastAppointment(idUsuario) {
     fechaReciente= historiasClinicasDB[i].date;
     }
     }
-   return historiaPaciente;
+  return historiaPaciente;
   }
   
 

@@ -39,7 +39,7 @@ console.log(checking());*/
 // que tenemos un impostor! realiza un script que nos permita identificar tanto a los pacientes que este 
 // impostor halla atendido como a los hospitales en los que estuvo para poder realizar nuestro respectivo informe.
 
-function checking(){
+/*function checking(){
     let informe=[];
     for(let i =0; i <historiasClinicasDB.length;i++){
         if(historiasClinicasDB[i].doctor === "Dr. Alberto Martínez"){
@@ -57,6 +57,17 @@ function checking(){
     }
     return informe;
 }
-console.log (checking());
+console.log (checking());*/
+
+//acabamos de ser demandados por la familia de un paciente que murio luego de una visita a uno de nuestros 
+// centros medicos, resulta que en la investigacion sobre su muerte encontraron que en uno de nuestros 
+// centros medicos le suministraron Warfarina y Meloxicam en una misma visita, esta combinacion puede ser 
+// mortal porque no se debe combinar anticoagulantes con antiinflamatorios no esteroides, no tenemos una lista
+//  de los medicamentos que usamos pero con la base de datos que tenemos podemos determinar cuales son los medicamentos
+//  que utilizamos luego de que tengas esa lista de medicamentos investiga cuales de ahi son antiinflamatorios no esteroides
+//  y luego de eso realiza un script que permita identificar a los doctores que suministraron Warfarina con alguno de esos
+//  antiinflamatorios no esteroides, los hospitales que permitieron esto tambien tienen responsabilidad por lo tanto tambien
+//  debemos obtener el nombre los hospitales donde sucedio esto y ademas el nombre de los usuarios para poder contactarlos y
+//  llegar a una conciliacion con ellos antes de que se sumen a esta demanda.
 
 
